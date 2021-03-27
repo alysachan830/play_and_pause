@@ -1,0 +1,27 @@
+{
+  "name": "play_and_pause",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alysachan830/play_and_pause.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alysachan830/play_and_pause/issues"
+  },
+  "homepage": "https://github.com/alysachan830/play_and_pause#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "buffer": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.12.0",
+    "node-fetch": "^2.6.1",
+    "qs": "^6.9.6"
+  }
+}

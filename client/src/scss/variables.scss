@@ -1,0 +1,41 @@
+// Font-family
+$body-font-family: "Work Sans", serif;
+
+// Spacing
+$spacer: 4px;
+$spacers: ();
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * 1), // 4px
+    2: ($spacer * 2), // 8px
+    3: ($spacer * 3), // 12px
+    4: ($spacer * 3.5), // 14px
+    5: ($spacer * 4), // 16px
+    6: ($spacer * 4.5), // 18px
+    7: ($spacer * 5), // 20px
+    8: ($spacer * 6), // 24px
+    9: ($spacer * 7), // 28px
+    10: ($spacer * 8), // 32px
+    11: ($spacer * 9), // 36px
+    12: ($spacer * 10), // 40px
+    13: ($spacer * 10.5), // 42px
+    14: ($spacer * 12), // 48px
+    15: ($spacer * 13), // ß52px
+    16: ($spacer * 14), // 56px
+    17: ($spacer * 15), // 60px
+    18: ($spacer * 16), // 64px
+    19: ($spacer * 18), // 72px
+    20: ($spacer * 20), // 80px
+    21: ($spacer * 21), // 84px
+    22: ($spacer * 24), // 96px
+    23: ($spacer * 26), // 104px
+    24: ($spacer * 28), // 112px
+    25: ($spacer * 32), // 128px
+    26: ($spacer * 44), // 176px
+    27: ($spacer * 48), // 192px
+    28: ($spacer * 56), // 224px
+    29: ($spacer * 60), // 240px
+  ),
+  $spacers
+);

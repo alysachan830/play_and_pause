@@ -1,0 +1,16 @@
+$elements: title-on-img, swiper-arrow, app-bar, cart-toolbar, nav-drawer--temporary, search;
+
+@function get-z-index($list, $item) {
+
+    $z-index: index($list, $item);
+ 
+    @if $z-index {
+       @return $z-index;
+    }
+ 
+    // Print warning when $item is not found in $elements
+    @warn 'There is no item "#{$item}" in this list; choose one of: #{$list}';
+    // Avoid printing warning
+    // @return null;
+ }   
+ 

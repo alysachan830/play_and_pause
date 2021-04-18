@@ -1,0 +1,13 @@
+@import '../helpers/zindex.scss';
+
+.swiper-button-prev, .swiper-button-next{
+    z-index: get-z-index($elements, swiper-arrow) !important;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    display: none;
+}
+
+.swiper-pagination-bullet{
+    border-radius: 15%;
+}

@@ -1,0 +1,30 @@
+.hover {
+    &__filter--darken {
+        transition: filter 0.3s;
+        &:hover {
+            filter : brightness(70%);
+        }
+    }
+
+    &--fade-out {
+        transition: opacity 0.3s;
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+    &--underline{
+        &::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: $primary;
+            transition: width 0.5s;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+        
+    }
+}

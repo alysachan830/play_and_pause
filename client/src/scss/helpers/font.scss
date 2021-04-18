@@ -1,34 +1,7 @@
 // @import '../../../node_modules/vuetify/src/styles/main.sass';
-
-@font-face {
-  font-family: BigNoodleTitling;
-  src: url(/font/big_noodle_titling.ttf);
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: BigNoodleTitling, sans-serif;
-  font-weight: normal;
-}
+// @import '~vuetify/src/styles/settings/_variables.scss';
 
 // font-size
-$font-size: (
-  "xxs": 10px,
-  "xs": 12px, 
-  "s": 14px,
-  "base": 16px,
-  "m": 18px,
-  "l": 20px,
-  "xl": 24px,
-  "2xl": 32px,
-  "3xl": 40px,
-  "4xl": 42px,
-  "5xl": 48px,
-  "6xl": 56px,
-  "7xl": 64px,
-  "8xl": 96px,
-);
-
-
 // Make responsive font-size 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
@@ -39,4 +12,27 @@ $font-size: (
           }
       }
   }
+}
+
+@font-face {
+  font-family: BigNoodleTitling;
+  src: url(/font/big_noodle_titling.ttf);
+}
+
+h1, h2, h3, h4, h5 {
+
+  color: $primary;
+  line-height: 1;
+  font-size: map-get($font-size, '8xl');
+  font-family: BigNoodleTitling, sans-serif;
+  font-weight: normal;
+
+  @include media-breakpoint-up(lg){
+    font-size: map-get($font-size, '9xl');
+
+  }
+}
+
+.text-nowrap{
+  white-space: nowrap;
 }

@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <Navbar></Navbar>
     <!-- <v-main style="height:2000px"></v-main> -->
     <router-view></router-view>
   </v-app>
@@ -8,17 +7,17 @@
 
 <script>
 // import HelloWorld from "./components/HelloWorld";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 
 export default {
   name: "App",
 
   components: {
-    Navbar
+    // Navbar,
   },
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>

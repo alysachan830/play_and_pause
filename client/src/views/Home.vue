@@ -1,5 +1,5 @@
 <template>
-  <div class="black">
+  <div>
     <Navbar></Navbar>
     <div class="bg-img-wrap mb-27 mb-lg-29">
       <v-row>
@@ -239,9 +239,10 @@
       <div class="mb-27 mb-lg-29">
         <h3 class="mb-8">faq</h3>
         <v-row justify="center">
-          <v-expansion-panels accordion>
+          <v-expansion-panels accordion class="faq">
             <v-expansion-panel class="py-4 py-lg-8">
               <v-expansion-panel-header
+                hide-actions
                 disable-icon-rotate
                 class="font-xl font-md-3xl"
                 v-slot:default="{ open }"
@@ -262,6 +263,7 @@
 
             <v-expansion-panel class="py-4 py-lg-8">
               <v-expansion-panel-header
+                hide-actions
                 disable-icon-rotate
                 class="font-xl font-md-3xl"
                 v-slot:default="{ open }"
@@ -282,6 +284,7 @@
 
             <v-expansion-panel class="py-4 py-lg-8">
               <v-expansion-panel-header
+                hide-actions
                 disable-icon-rotate
                 class="font-xl font-md-3xl"
                 v-slot:default="{ open }"
@@ -305,6 +308,7 @@
 
             <v-expansion-panel class="py-4 py-lg-8">
               <v-expansion-panel-header
+                hide-actions
                 disable-icon-rotate
                 class="font-xl font-md-3xl"
                 v-slot:default="{ open }"
@@ -407,7 +411,7 @@
         </div>
       </div>
     </div>
-    <Footer></Footer>
+    <Footer :parent="this.$options.name"></Footer>
   </div>
 </template>
 
@@ -415,12 +419,12 @@
 // @ is an alias to /src
 // import Navbar from "../components/Navbar";
 // import axios from "axios";
-import Navbar from "@/components/Navbar";
-import SwiperAlbumsOfTheMonth from "@/components/swiper/SwiperAlbumsOfTheMonth";
-import ProgressBar from "@/components/ProgressBar";
-import NewReleases from "@/components/NewReleases";
-import BestSellers from "@/components/BestSellers";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/header/Navbar";
+import SwiperAlbumsOfTheMonth from "@/pages/home/swiper/SwiperAlbumsOfTheMonth";
+import ProgressBar from "@/pages/home/ProgressBar";
+import NewReleases from "@/pages/home/NewReleases";
+import BestSellers from "@/pages/home/BestSellers";
+import Footer from "@/components/footer/Footer";
 // import Swiper from "../components/Swiper";
 // import SwiperVue from "../components/Swiper_vuetify";
 // http://127.0.0.1:8080/test.json
@@ -599,5 +603,63 @@ export default {
     left: 0;
     right: 0;
   }
+}
+
+.theme--dark.v-expansion-panels .v-expansion-panel {
+  background: transparent !important;
+  color: $primary !important;
+}
+
+.theme--dark.v-expansion-panels
+  .v-expansion-panel-header
+  .v-expansion-panel-header__icon
+  .v-icon {
+  color: $primary !important;
+}
+
+.theme--dark.v-expansion-panels .v-expansion-panel:not(:first-child)::after {
+  border-color: $primary !important;
+}
+
+// .theme--dark.v-expansion-panels
+//   .v-expansion-panel-header
+//   .v-expansion-panel-header__icon
+//   .v-icon {
+//   display: none !important;
+// }
+
+// .faq {
+//   .theme--dark.v-expansion-panels .v-expansion-panel {
+//     background: transparent !important;
+//     color: $primary !important;
+//   }
+// }
+
+.faq {
+  .theme--dark.v-expansion-panels .v-expansion-panel {
+    background: transparent !important;
+    color: $primary !important;
+  }
+
+  .v-expansion-panel::before {
+    box-shadow: none;
+  }
+  // .theme--dark.v-expansion-panels
+  //   .v-expansion-panel-header
+  //   .v-expansion-panel-header__icon
+  //   .v-icon {
+  //   color: $primary !important;
+  // }
+
+  // .theme--dark.v-expansion-panels .v-expansion-panel:not(:first-child)::after {
+  //   border-color: $primary !important;
+  // }
+
+  // .theme--dark.v-expansion-panels
+  //   .v-expansion-panel-header
+  //   .v-expansion-panel-header__icon
+  //   .v-icon {
+  //   display: none !important;
+  // }
 }
 </style>

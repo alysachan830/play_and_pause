@@ -81,7 +81,7 @@ import ProductFilter from "@/pages/products/ProductFilter";
 import ToTopBtn from "@/components/common/ToTopBtn";
 import Footer from "@/components/footer/Footer";
 export default {
-  name: "Products",
+  name: "Shop",
   components: {
     Navbar,
     ProductFilter,

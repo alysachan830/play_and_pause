@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Shop from "../views/Shop.vue";
+import Product from "../views/Product.vue";
 
 Vue.use(VueRouter);
 
@@ -25,11 +26,11 @@ const routes = [
     name: "Shop",
     component: Shop,
   },
-  // {
-  //   path: "/products",
-  //   name: "Products",
-  //   component: Products,
-  // },
+  {
+    path: "/shop/:productId",
+    name: "Product",
+    component: Product,
+  },
 ];
 
 const router = new VueRouter({

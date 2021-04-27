@@ -9,7 +9,12 @@
     </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item v-for="n in 3" :key="n">
-        <SwiperNewReleases :id="n" :dataFromParent="data"></SwiperNewReleases>
+        <SwiperNewReleases
+          :perSlideNum="3"
+          :id="n"
+          :dataFromParent="data"
+          :autoPlay="true"
+        ></SwiperNewReleases>
       </v-tab-item>
     </v-tabs-items>
   </div>

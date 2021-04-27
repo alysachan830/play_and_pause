@@ -151,7 +151,7 @@ export default {
   }
 
   &.theme--dark.v-expansion-panels .v-expansion-panel {
-    background: rgb(34, 34, 34) !important;
+    background: $dark-info !important;
     color: $light-info !important;
   }
 

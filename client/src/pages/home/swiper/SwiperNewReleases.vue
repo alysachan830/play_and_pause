@@ -1,6 +1,6 @@
 <template>
   <!-- Swiper -->
-  <div class="swiperNewReleases">
+  <div class="swiperNewReleases position-relative">
     <div class="swiper-wrapper" ref="swiperWrapper">
       <div
         class="swiper-slide d-block text-left"
@@ -34,6 +34,8 @@ export default {
   props: {
     id: Number,
     dataFromParent: Array,
+    perSlideNum: Number,
+    autoPlay: Boolean,
   },
   data() {
     return {
@@ -63,10 +65,12 @@ export default {
       // loop: true,
       slidesPerView: 1.5,
       spaceBetween: 30, //30,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+      autoplay: this.autoPlay
+        ? {
+            delay: 2500,
+            disableOnInteraction: false,
+          }
+        : false,
       // pagination: {
       //   el: ".swiper-pagination",
       //   clickable: true,
@@ -80,7 +84,7 @@ export default {
           slidesPerView: 2.5,
         },
         1264: {
-          slidesPerView: 3,
+          slidesPerView: this.perSlideNum,
         },
       },
     });

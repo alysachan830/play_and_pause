@@ -65,6 +65,7 @@
         class="mb-24 mb-md-28"
         :headers="headers"
         :items="album"
+        mobile-breakpoint="0"
         disable-pagination
         disable-filtering
         disable-sort

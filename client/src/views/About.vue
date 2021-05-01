@@ -32,7 +32,7 @@
         <h2 class="mb-14">shop</h2>
         <v-row>
           <v-col class="mb-2 mb-md-0" cols="12" md="6">
-            <v-card :loading="loading">
+            <v-card>
               <template slot="progress">
                 <v-progress-linear
                   color="deep-purple"
@@ -68,7 +68,7 @@
             </v-card>
           </v-col>
           <v-col cols="12" md="6">
-            <v-card :loading="loading">
+            <v-card>
               <template slot="progress">
                 <v-progress-linear
                   color="deep-purple"

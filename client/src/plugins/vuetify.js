@@ -14,8 +14,8 @@ export default new Vuetify({
       dark: {
         primary: "#00FFCE",
         info: colors.grey.darken1,
-        lightInfo: "#e0e0e0",
-        darkInfo: "#424242",
+        lightInfo: "#bdbdbd",
+        darkInfo: "#262626",
         dark: "#121212",
       },
     },

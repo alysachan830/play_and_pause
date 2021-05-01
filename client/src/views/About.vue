@@ -7,9 +7,10 @@
           <v-img src="images/jamakassi-wejxKZ-9IZg-unsplash.jpg"></v-img>
         </v-col>
         <v-col cols="12" md="5" class="offset-md-1">
-          <h2 class="mb-14">about</h2>
+          <h2 class="mb-14">about us</h2>
           <p class="font-xl font-md-2xl mb-14">
-            Record store based in Hong Kong.
+            Record store based in Hong Kong, exploring innovative and creative
+            music.
           </p>
           <ul class="contact-info py-6 py-md-10 pl-14">
             <li class="font-l font-md-xl mb-4">

@@ -1,38 +1,5 @@
 <template>
   <div>
-    <!-- <v-row>
-      <v-col cols="6">
-        <v-img
-          src="/images/bnw_logan-weaver-IgVtUeeZOvY-unsplash.jpg"
-          height="100vh"
-        ></v-img>
-      </v-col>
-      <v-col cols="6">
-        <v-row align="center">
-          <v-col>
-            <h2 class="font-8xl mb-14">Admin login</h2>
-            <v-form>
-              <v-text-field
-                label="Username"
-                v-model="username"
-                outlined
-                required
-              ></v-text-field>
-              <v-text-field
-                label="Password"
-                v-model="password"
-                outlined
-                required
-              ></v-text-field>
-              <div class="text-right">
-                <v-btn type="submit" :disabled="invalid">sign in</v-btn>
-              </div>
-            </v-form>
-          </v-col>
-        </v-row>
-      </v-col>
-    </v-row> -->
-
     <v-img
       src="/images/bnw_logan-weaver-IgVtUeeZOvY-unsplash.jpg"
       height="100vh"

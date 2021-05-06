@@ -5,6 +5,7 @@ import About from "../views/About.vue";
 import Shop from "../views/Shop.vue";
 import Product from "../views/Product.vue";
 import Checkout from "../views/Checkout.vue";
+import Admin from "../views/Admin.vue";
 
 Vue.use(VueRouter);
 
@@ -38,6 +39,11 @@ const routes = [
     path: "/checkout",
     name: "Checkout",
     component: Checkout,
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
   },
 ];
 

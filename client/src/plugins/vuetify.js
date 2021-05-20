@@ -17,6 +17,7 @@ export default new Vuetify({
         lightInfo: "#bdbdbd",
         darkInfo: "#262626",
         dark: "#121212",
+        danger: "#dc3545",
       },
     },
   },

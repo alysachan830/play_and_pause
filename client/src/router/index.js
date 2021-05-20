@@ -5,7 +5,13 @@ import About from "../views/About.vue";
 import Shop from "../views/Shop.vue";
 import Product from "../views/Product.vue";
 import Checkout from "../views/Checkout.vue";
-import Admin from "../views/Admin.vue";
+import Login from "../views/Login.vue";
+import Dashboard from "../views/Dashboard.vue";
+import Overview from "../pages/dashboard/Overview.vue";
+import Orders from "../pages/dashboard/Orders.vue";
+import Products from "../pages/dashboard/Products.vue";
+import Coupons from "../pages/dashboard/Coupons.vue";
+import AddOrder from "../pages/dashboard/AddOrder.vue";
 
 Vue.use(VueRouter);
 
@@ -41,9 +47,45 @@ const routes = [
     component: Checkout,
   },
   {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
     path: "/admin",
-    name: "Admin",
-    component: Admin,
+    name: "Dashboard",
+    component: Dashboard,
+    children: [
+      {
+        name: "Overview",
+        component: Overview,
+        path: "",
+      },
+      {
+        name: "Order",
+        component: Orders,
+        path: "orders",
+      },
+      {
+        name: "Products",
+        component: Products,
+        path: "products",
+      },
+      {
+        name: "Coupons",
+        component: Coupons,
+        path: "coupons",
+      },
+      {
+        name: "AddOrder",
+        component: AddOrder,
+        path: "add-order",
+      },
+    ],
+  },
+  {
+    path: "*",
+    redirect: "/",
   },
 ];
 

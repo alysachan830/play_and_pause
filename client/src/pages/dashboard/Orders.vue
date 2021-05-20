@@ -9,123 +9,6 @@
         label="Search"
         append-icon="mdi-magnify"
       ></v-text-field>
-      <!-- Add order diglog -->
-      <div class="text-right">
-        <v-dialog v-model="addOrderDialog" width="1000">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn text v-bind="attrs" v-on="on">
-              <v-icon class="mr-2" small>mdi-plus</v-icon>
-              Add order
-            </v-btn>
-          </template>
-          <v-card class="pa-6">
-            <v-card-title class="mb-6"> Add order </v-card-title>
-            <v-card-text>
-              <v-form ref="form" v-model="valid">
-                <!-- Title input -->
-                <v-text-field
-                  v-model="newOrder.name"
-                  label="Name"
-                  required
-                ></v-text-field>
-                <!-- Tel input -->
-                <v-text-field
-                  v-model="newOrder.tel"
-                  label="Tel"
-                  required
-                ></v-text-field>
-                <!-- Address input -->
-                <v-text-field
-                  v-model="newOrder.address"
-                  label="Address"
-                  required
-                ></v-text-field>
-                <!-- Email input -->
-                <v-text-field
-                  v-model="newOrder.email"
-                  label="Email"
-                  required
-                ></v-text-field>
-                <!-- Payment method -->
-                <v-select
-                  :items="paymentMethods"
-                  label="Payment methods"
-                ></v-select>
-                <!-- PaymentStatus checkbox -->
-                <v-checkbox
-                  v-model="newOrder.paymentStatus"
-                  label="Payment status"
-                ></v-checkbox>
-                <!-- Purchased -->
-                <v-row>
-                  <v-col>
-                    <v-text-field
-                      label="Product id"
-                      hint="Product id can be founded in Products tab"
-                      v-model="addOrderPurchased"
-                    >
-                    </v-text-field>
-                  </v-col>
-                  <v-col class="d-flex align-center">
-                    <v-text-field label="Quantity" type="number"></v-text-field>
-                    <v-btn icon>
-                      <v-icon>mdi-plus</v-icon>
-                    </v-btn>
-                  </v-col>
-                </v-row>
-                <!-- <v-text-field
-                  label="Product id"
-                  hint="Product id can be founded inside Products tab"
-                  v-model="addOrderPurchased"
-                  append-icon="mdi-plus"
-                  @click:append="addItem"
-                >
-                </v-text-field> -->
-                <!-- <v-chip
-                  v-for="(id, index) in newOrder.purchased"
-                  :key="id"
-                  close
-                  @click:close="newOrder.purchased.splice(index, 1)"
-                  >{{ id }}</v-chip
-                > -->
-              </v-form>
-            </v-card-text>
-            <v-divider class="mx-4"></v-divider>
-            <v-card-title>Purchased items</v-card-title>
-            <v-card-text>
-              <v-data-table
-                :headers="purchasedHeaders"
-                :items="newOrder.purchased"
-                :items-per-page="5"
-              ></v-data-table>
-            </v-card-text>
-            <v-divider class="mx-4"></v-divider>
-
-            <v-card-actions>
-              <!-- <div class="text-center"> -->
-              <v-spacer></v-spacer>
-              <v-btn
-                class="mr-4"
-                @click="closeAddOrderDialog"
-                color="red"
-                outlined
-              >
-                Cancel
-              </v-btn>
-              <v-btn
-                type="submit"
-                @click="addOrder"
-                :disabled="!valid"
-                color="primary"
-                outlined
-              >
-                Add
-              </v-btn>
-              <!-- </div> -->
-            </v-card-actions>
-          </v-card>
-        </v-dialog>
-      </div>
     </div>
     <v-data-table
       :headers="headers"
@@ -234,22 +117,20 @@ export default {
   },
   data() {
     return {
-      valid: false,
       search: "",
       searchBar: "",
-      addOrderDialog: false,
-      addOrderPurchased: "",
-      newOrder: {
-        name: "",
-        tel: "",
-        address: "",
-        email: "",
-        paymentMethod: "",
-        total: 0,
-        paymentStatus: false,
-        purchased: [],
-      },
-      paymentMethods: ["VISA", "Paypal", "Apply Pay", "Alipay", "WeChat Pay"],
+      // addOrderPurchased: "",
+      // newOrder: {
+      //   name: "",
+      //   tel: "",
+      //   address: "",
+      //   email: "",
+      //   paymentMethod: "",
+      //   total: 0,
+      //   paymentStatus: false,
+      //   purchased: [],
+      // },
+      // paymentMethods: ["VISA", "Paypal", "Apply Pay", "Alipay", "WeChat Pay"],
       purchasedHeaders: [
         {
           text: "Title",
@@ -459,12 +340,9 @@ export default {
 
   methods: {
     addOrder() {},
-    addItem() {
-      this.newOrder.purchased.push(this.addOrderPurchased);
-    },
-    closeAddOrderDialog() {
-      this.addOrderDialog = false;
-    },
+    // addItem() {
+    //   this.newOrder.purchased.push(this.addOrderPurchased);
+    // },
     editItem(item) {
       this.editedIndex = this.orders.indexOf(item);
       this.selectedItem = { ...item };

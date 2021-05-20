@@ -10,6 +10,8 @@ import Dashboard from "../views/Dashboard.vue";
 import Overview from "../pages/dashboard/Overview.vue";
 import Orders from "../pages/dashboard/Orders.vue";
 import Products from "../pages/dashboard/Products.vue";
+import Coupons from "../pages/dashboard/Coupons.vue";
+import AddOrder from "../pages/dashboard/AddOrder.vue";
 
 Vue.use(VueRouter);
 
@@ -69,7 +71,21 @@ const routes = [
         component: Products,
         path: "products",
       },
+      {
+        name: "Coupons",
+        component: Coupons,
+        path: "coupons",
+      },
+      {
+        name: "AddOrder",
+        component: AddOrder,
+        path: "add-order",
+      },
     ],
+  },
+  {
+    path: "*",
+    redirect: "/",
   },
 ];
 

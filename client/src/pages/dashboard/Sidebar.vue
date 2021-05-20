@@ -12,21 +12,43 @@
           </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider> -->
-    <v-list class="py-5">
-      <v-list-item class="mb-10">
-        <v-list-item-title>
-          <h2 class="font-5xl">play&pause</h2>
-        </v-list-item-title>
-      </v-list-item>
-      <v-list-item v-for="item in items" :key="item.title" :to="item.path">
-        <v-list-item-icon>
-          <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
-        <v-list-item-content>
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
+    <div>
+      <v-list class="py-5">
+        <v-list-item class="mb-10">
+          <v-list-item-title>
+            <h2 class="font-5xl">play&pause</h2>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          :to="item.path"
+          exact
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="text-uppercase">{{
+              item.title
+            }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <v-list>
+        <v-subheader class="text-uppercase">For testing only</v-subheader>
+        <v-list-item exact to="/admin/add-order">
+          <v-list-item-icon>
+            <v-icon>mdi-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="text-uppercase"
+              >Add order</v-list-item-title
+            >
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </div>
     <template v-slot:append>
       <div class="pa-5">
         <div class="mb-5">
